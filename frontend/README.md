@@ -42,7 +42,7 @@ Single-page frontend for the assignment requirements in `Backend Engineer Assign
 
   Edit `.env` values:
 
-  - `VITE_API_BASE_URL=http://localhost:8080` for real backend
+  - `VITE_API_BASE_URL=http://localhost:8090` for real backend
   - `VITE_USE_MOCK_API=false` to use real backend
 
 ## Lightweight Mock API mode

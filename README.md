@@ -31,7 +31,7 @@ docker compose up -d --build
 This starts:
 
 - PostgreSQL on `localhost:5432`
-- Backend API on `http://localhost:8080`
+- Backend API on `http://localhost:8090`
 - Frontend on `http://localhost:5000`
 
 ### Important: Database migrations

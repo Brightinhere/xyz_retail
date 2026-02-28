@@ -1,6 +1,6 @@
 import * as mockApi from './mockRetailApi';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL?.trim() || 'http://localhost:8080';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL?.trim() || 'http://localhost:8090';
 const USE_MOCK_API = import.meta.env.VITE_USE_MOCK_API === 'true';
 
 async function request(path, options = {}) {

@@ -95,7 +95,7 @@ cd ..
 docker-compose up -d
 ```
 
-After the containers are running, apply the database migrations (see below) and the API will be available at **`http://localhost:8080`**.
+After the containers are running, apply the database migrations (see below) and the API will be available at **`http://localhost:8090`**.
 
 ---
 
@@ -123,7 +123,7 @@ After the containers are running, apply the database migrations (see below) and 
    .\gradlew.bat bootRun
    ```
 
-4. The API will be available at **`http://localhost:8080`**.
+4. The API will be available at **`http://localhost:8090`**.
 
 ---
 
@@ -133,12 +133,12 @@ For both the Docker Compose and manual approaches you need to run the SQL migrat
 
 1. **Create the schema** *(required)* — run [`V1__init_schema.sql`](src/main/resources/db/migration/V1__init_schema.sql) to create all tables, indices, and constraints:
    ```bash
-   psql -h localhost -U not_root_user -d xyz_retail -f src/main/resources/db/migration/V1__init_schema.sql
+   psql -h localhost -U not_root_user -d xyz_retail_api -f src/main/resources/db/migration/V1__init_schema.sql
    ```
 
 2. **Seed product data** *(optional)* — if you want the database pre-populated with 50 products and inventory, also run [`V2__seed_products_inventory.sql`](src/main/resources/db/migration/V2__seed_products_inventory.sql):
    ```bash
-   psql -h localhost -U not_root_user -d xyz_retail -f src/main/resources/db/migration/V2__seed_products_inventory.sql
+   psql -h localhost -U not_root_user -d xyz_retail_api -f src/main/resources/db/migration/V2__seed_products_inventory.sql
    ```
 
 > **Tip:** You can also enable Flyway to apply these migrations automatically on startup by uncommenting the relevant lines in `application.properties` and `build.gradle`.
@@ -157,7 +157,7 @@ Code coverage reports (JaCoCo) are generated at `build/reports/jacoco/test/html/
 
 ## API Reference
 
-Base URL: `http://localhost:8080`
+Base URL: `http://localhost:8090`
 
 ### Customer APIs
 
