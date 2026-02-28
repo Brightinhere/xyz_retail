@@ -128,21 +128,7 @@ After the containers are running, apply the database migrations (see below) and 
 ---
 
 ### Database Setup (Options 2 & 3)
-
-For both the Docker Compose and manual approaches you need to run the SQL migration scripts against your PostgreSQL database.
-
-1. **Create the schema** *(required)* — run [`V1__init_schema.sql`](src/main/resources/db/migration/V1__init_schema.sql) to create all tables, indices, and constraints:
-   ```bash
-   psql -h localhost -U not_root_user -d xyz_retail_api -f src/main/resources/db/migration/V1__init_schema.sql
-   ```
-
-2. **Seed product data** *(optional)* — if you want the database pre-populated with 50 products and inventory, also run [`V2__seed_products_inventory.sql`](src/main/resources/db/migration/V2__seed_products_inventory.sql):
-   ```bash
-   psql -h localhost -U not_root_user -d xyz_retail_api -f src/main/resources/db/migration/V2__seed_products_inventory.sql
-   ```
-
-> **Tip:** You can also enable Flyway to apply these migrations automatically on startup by uncommenting the relevant lines in `application.properties` and `build.gradle`.
-
+> Not needed anymore. Managed to get flyway working so migrations happen autoamtically.
 ---
 
 ### Running Tests
