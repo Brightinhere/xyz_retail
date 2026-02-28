@@ -95,7 +95,7 @@ async function loadSalesByRange() {
 }
 
 function isLowInventory(product) {
-  return Boolean(product.inventory?.lowStock);
+  return Boolean(product.lowStock);
 }
 
 function inventoryQuantity(product) {
