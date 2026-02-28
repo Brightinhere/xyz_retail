@@ -76,3 +76,10 @@ To also remove PostgreSQL persisted data volume:
 ```bash
 docker compose down -v
 ```
+
+## Coverage report
+
+Latest report of the backend's coverage
+
+<img width="959" height="271" alt="image" src="https://github.com/user-attachments/assets/ad9c2f5c-8f71-4f0f-a30a-d56cf96eecc7" />
+
